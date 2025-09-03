@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=$1
+NUMBER=$10
 
 # -gt, -lt, -eq, -ge, -le
 
