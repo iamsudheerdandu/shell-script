@@ -1,6 +1,8 @@
 #!/bin/bash
 
-NUMBER=$101
+NUMBER=$1
+
+# -gt, -lt, -eq, -ge, -le
 
 if [$NUMBER -gt 100]
 then 
