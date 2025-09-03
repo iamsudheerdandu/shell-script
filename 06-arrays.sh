@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Arrays
+
 MOVIES=("pushpa" "rrr" "devera")
 
 echo "First movie: ${MOVIES[0]}"
