@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=$10
+NUMBER=${10}
 
 # -gt, -lt, -eq, -ge, -le
 
@@ -10,3 +10,4 @@ then
 else
     echo "given number is less than or equal to 100"
 fi
+
