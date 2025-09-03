@@ -1,4 +1,5 @@
 #!/bin/bash
+#input varaiables
 
 echo "Please enter your USERNAME"
 read -s USERNAME
