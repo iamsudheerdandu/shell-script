@@ -31,10 +31,10 @@ if [ $! -ne 0 ]
 
 
 then 
-    echo "mysql Instillation.......FAILED"
+    echo "ERROR : mysql Instillation.......FAILED"
     exit 1
 else    
-    echo "mysql Instillation.......SUCCESS"
+    echo "ERROR : mysql Instillation.......SUCCESS"
 
 fi
 
