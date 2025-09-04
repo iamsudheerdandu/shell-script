@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 
 # USERID=$(id -u)
@@ -30,47 +30,37 @@
 
 # fi
 
-#!/bin/bash
+
 
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]
+if [ $USERID -ne 0 ] #Check Root access
 then
     echo "ERROR: User required root access"
 
-exit 1
+    exit 1
 
-else
+fi
 
-    dnf list installed mysql
+dnf list installed mysql #Check whether SQL is installed
+
+if 
+    [ $? -ne 0 ]
+
+then 
+    dnf install mysql -y
+
 fi
 
 if 
     [ $? -ne 0 ]
 
 then 
-
-    echo "ERROR: My sql already Installed"
-
+    echo "My SQL Instillation.......FAILED"
     exit 1
-else
-
-dnf install mysql -y
-
-if 
-
-[ $? -ne 0 ]
-
-then
-
-echo "MY SQL Instillation FAILED"
-
-exit 1
-
-else
-
-echo " My sql Instillation SUCCESS"
+else    
+    echo "My SQL Instillation.......SUCCESS"
 
 fi
-fi
+
