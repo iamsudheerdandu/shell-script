@@ -8,7 +8,7 @@ if [ $USERID -ne 0 ] #Check Root access
 then
     echo "ERROR: User required root access"
 
-    exit 1
+    exit 1  # other than 0
 
 fi
 
