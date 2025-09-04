@@ -43,16 +43,17 @@ exit 1
 
 else
 
-dnf list installed mysql
+    dnf list installed mysql
+fi
 
-if [ $? -ne 0 ]
+if 
+    [ $? -ne 0 ]
 
 then 
 
-echo "ERROR: My sql already Installed"
+    echo "ERROR: My sql already Installed"
 
-exit 1
-
+    exit 1
 else
 
 dnf install mysql -y
