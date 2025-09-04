@@ -18,7 +18,7 @@ if
     [ $? -eq 0 ]
 
 then 
-    echo "Mysql is already Installed...."
+    echo "mysql is already ........INSTALLED"
 
     exit 1
 
@@ -31,10 +31,10 @@ if [ $! -ne 0 ]
 
 
 then 
-    echo "My SQL Instillation.......FAILED"
+    echo "mysql Instillation.......FAILED"
     exit 1
 else    
-    echo "My SQL Instillation.......SUCCESS"
+    echo "mysql Instillation.......SUCCESS"
 
 fi
 
