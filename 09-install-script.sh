@@ -53,20 +53,13 @@ then
 
     exit 1
 
-else
+fi
+
 
 dnf install mysql -y
 
-if [ $? -ne 0 ]
+if [ $! -ne 0 ]
 
-then 
-    echo "My SQL "
-
-
-fi
-
-if 
-    [ $? -ne 0 ]
 
 then 
     echo "My SQL Instillation.......FAILED"
