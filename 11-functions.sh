@@ -4,6 +4,24 @@
 
 USERID=$(id -u)
 
+
+VALIDATE () {
+if [ $? -ne 0 ]
+
+
+then 
+    echo "ERROR : mysql Instillation.......FAILED"
+    exit 1
+else    
+    echo "mysql Instillation.......SUCCESS"
+
+fi
+    
+}
+
+
+
+
 if [ $USERID -ne 0 ] #Check Root access
 then
     echo "ERROR: User required root access"
@@ -27,13 +45,4 @@ fi
 
 dnf install mysql -y #Installing mysql
 
-if [ $! -ne 0 ]
-
-
-then 
-    echo "ERROR : mysql Instillation.......FAILED"
-    exit 1
-else    
-    echo "ERROR : mysql Instillation.......SUCCESS"
-
-fi
+VALIDATE $?

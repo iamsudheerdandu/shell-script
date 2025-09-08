@@ -34,7 +34,7 @@ then
     echo "ERROR : mysql Instillation.......FAILED"
     exit 1
 else    
-    echo "ERROR : mysql Instillation.......SUCCESS"
+    echo "mysql Instillation.......SUCCESS"
 
 fi
 
