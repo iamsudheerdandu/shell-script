@@ -27,7 +27,7 @@ fi
 
 dnf install mysqll -y #Installing mysql
 
-if [ $? -ne 0 ]
+if [ $! -ne 0 ]
 
 
 then 
