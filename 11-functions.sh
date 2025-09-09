@@ -1,48 +1,47 @@
 #!/bin/bash
 
-
-
 USERID=$(id -u)
 
+VALIDATE(){
+    if [ $? -ne 0 ]
+    then
+        echo "Installation MySQL ----FAILED"
+        exit 1
+    else
+        echo "Installing MySQL ----SUCCESS"
+    fi    
 
-VALIDATE () {
-if [ $? -ne 0 ]
-
-
-then 
-    echo "ERROR : mysql Instillation.......FAILED"
-    exit 1
-else    
-    echo "mysql Instillation.......SUCCESS"
-
-fi
-    
 }
 
 
-
-
-if [ $USERID -ne 0 ] #Check Root access
-then
-    echo "ERROR: User required root access"
-
-    exit 1  # other than 0
-
-fi
-
-dnf list installed mysql #Check whether SQL is installed
-
 if 
-    [ $? -eq 0 ]
+    [ $USERID -ne 0 ]
 
 then 
-    echo "mysql is already ........INSTALLED"
-
+    echo "ERROR: you must have sudo access to execute this command"
     exit 1
-
 fi
 
-
-dnf install mysqll -y #Installing mysql
+dnf list installed mysql
 
 VALIDATE $?
+
+else
+    echo "My SQL already INSTALLED"
+fi            
+
+dnf list installed git
+
+if [ $? -ne 0 ]
+
+then 
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+        echo "Installation git ----FAILED"
+        exit 1
+    else
+        echo "Installing git ----SUCCESS"
+else
+    echo "git is already INSTALLED"
+fi
