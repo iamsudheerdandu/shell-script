@@ -14,6 +14,11 @@ VALIDATE(){
 }
 
 
+
+
+
+
+
 if 
     [ $USERID -ne 0 ]
 
@@ -27,7 +32,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then # not installed
     dnf install mysql -y 
-    VALIDATE $? "Installing MySQL"
+    VALIDATE $? "Installing MySQL"   #keeping previous command exit status as first argument $?, and Installing MySQl as second argument
 else
     echo "My SQL already INSTALLED"
 fi            
@@ -38,7 +43,7 @@ if [ $? -ne 0 ]
 
 then 
     dnf install git -y
-    VALIDATE $? "Installing git"
+    VALIDATE $? "Installing git"   # As above passing two arguments in the Function
 else
     echo "git is already INSTALLED"
 fi
