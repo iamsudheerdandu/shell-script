@@ -46,8 +46,7 @@ then
     VALIDATE $? "Installing MySQL"
 
 else
-    echo 
-        -e "MySQL is already $Y Installed"
+    echo -e "MySQL is already $Y Installed $N"   
 fi     
 
 dnf list instlled git &>>LOG_FILE_NAME
