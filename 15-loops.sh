@@ -42,10 +42,10 @@ for PACKAGE in $@
 do  
     if [$? -ne 0 ]
     then
-        dnf list installed $PACKAGE &>>LOG_FILE_NAME
+        dnf install $PACKAGE -y &>>LOG_FILE_NAME
         VALIDATE $? "Installing $PACKAGE"
     else
-        echo "$PACKAGE already $Y Installed $N"
+        echo -e "$PACKAGE already $Y Installed $N"
     fi
 done
 
