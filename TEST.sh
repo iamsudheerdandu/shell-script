@@ -52,7 +52,7 @@ fi
 
 dnf list instlled git &>>LOG_FILE_NAME
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
     dnf install git -y &>>LOG_FILE_NAME
 
