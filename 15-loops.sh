@@ -40,7 +40,7 @@ fi
 for PACKAGE in $@
 
 do  
-    if [$? -ne 0 ]
+    if [ $? -ne 0 ]
     then
         dnf install $PACKAGE -y &>>LOG_FILE_NAME
         VALIDATE $? "Installing $PACKAGE"
