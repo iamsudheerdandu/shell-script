@@ -40,9 +40,10 @@ fi
 for PACKAGE in $@
 
 do  
+    dnf list installed $PACKAGE &>>LOG_FILE_NAME
     if [ $? -ne 0 ]
     then
-        dnf install $PACKAGE -y &>>LOG_FILE_NAME
+        dnf install $package -y &>>LOG_FILE_NAME 
         VALIDATE $? "Installing $PACKAGE"
     else
         echo -e "$PACKAGE already $Y Installed $N"
