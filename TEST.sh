@@ -29,7 +29,7 @@ TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME=$LOG_FOLDER/$LOG_FILE-$TIME_STAMP.log
 
 
-echo "script started executed at $TIME_STAMP" >>&$LOG_FILE_NAME
+echo "script started executed at $TIME_STAMP" &>>$LOG_FILE_NAME
 
 if [ $USERID -ne 0 ]
 then
