@@ -24,9 +24,7 @@ VALIDATE(){                      #Functions
 
 }
 
-
-echo "Script started executing at : $TIMESTAMP" &>>$LOG_FILE_NAME  #&>> is to log the file
-
+CHECK_ROOT(){
 
 if 
     [ $USERID -ne 0 ]
@@ -35,6 +33,15 @@ then
     echo "ERROR: you must have sudo access to execute this command"
     exit 1
 fi
+
+}
+
+
+CHECK_ROOT
+
+echo "Script started executing at : $TIMESTAMP" &>>$LOG_FILE_NAME  #&>> is to log the file
+
+
 
 
 for PACKAGE in $@
