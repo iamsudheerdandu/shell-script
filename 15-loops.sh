@@ -37,12 +37,11 @@ fi
 }
 
 
-CHECK_ROOT
+
 
 echo "Script started executing at : $TIMESTAMP" &>>$LOG_FILE_NAME  #&>> is to log the file
 
-
-
+CHECK_ROOT
 
 for PACKAGE in $@
 
